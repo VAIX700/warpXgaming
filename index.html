@@ -129,6 +129,53 @@
     }
     @keyframes slideIn { to { transform: translateX(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    /* Discord Card Styles */
+.discord-card {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 16px;
+  width: 240px;
+  box-shadow: 0 0 15px rgba(114, 137, 218, 0.2);
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.discord-card:hover {
+  border-color: #7289da;
+  box-shadow: 0 0 20px rgba(114, 137, 218, 0.5);
+}
+.discord-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border: 2px solid #7289da;
+}
+.discord-heading {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.discord-description {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+.join-button {
+  padding: 8px 16px;
+  background-color: #7289da;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+.join-button:hover {
+  background-color: #5b6eae;
+}
   </style>
 </head>
 <body>
@@ -286,17 +333,28 @@
 
 <h2>Disclaimer</h2>
     <p>Some of the games here are not made by us. They are showcased for entertainment and discovery.if you are a copyright holder and wish to request changes, please contact us.</p>.</p>
-    <p>Collaborate with gamers in: <a href="https://vaix700.github.io/warpXchat/" target="_blank"><p style="color:blue;"> WarpXchat</a></p></p>
-<footer>
+    <p>Collaborate with gamers in: <a href="https://vaix700.github.io/warpXchat/" target="_blank"><p style="color:blue;"> WarpXchat</a></p><footer>
   &copy; <span id="year"></span> WarpXgaming-Studios. All rights reserved.
-</footer>
-</div>
-</div>
+</footer></p>
 
 </div>
 </div>
 
-    
+</div>
+</div>
+          </div>
+         
+          <!-- Discord Community Section -->
+<div style="display: flex; justify-content: center; margin-top: 40px;">
+  <div class="discord-card">
+    <img src="https://github.com/VAIX700/warpXgaming_/blob/main/favicon.png?raw=true" alt="Warp" class="discord-logo" />
+    <div class="discord-heading">Join the community on Discord</div>
+    <div class="discord-description">Hang out with gamers, get updates, and play together!</div>
+    <button class="join-button" onclick="joinDiscord()">Join on Discord</button>
+  </div>
+</div>
+    </div>
+        <!-- End Discord Section --> 
 
 <!-- Dark Alert Style and Script -->
 <style>
@@ -486,6 +544,9 @@ function logout() {
   localStorage.removeItem("warpxUser");
   document.getElementById("main-app").style.display = "none";
   document.getElementById("login-section").style.display = "flex";
+}
+function joinDiscord() {
+  window.open("https://discord.gg/YbrYuXKdNr", "_blank");
 }
 </script>
 
