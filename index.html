@@ -176,6 +176,59 @@
 .join-button:hover {
   background-color: #5b6eae;
 }
+/* --- Responsive Layout Fixes --- */
+.login-box {
+  width: 90%;
+  max-width: 350px;
+}
+
+.main-content {
+  margin-left: 240px;
+}
+
+/* Sidebar collapse on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    transform: none;
+    animation: none;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Game cards in responsive grid */
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  overflow: visible;
+}
+
+@media (max-width: 500px) {
+  .game-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  .game-card img {
+    height: 80px;
+  }
+}
+
+/* Discord card responsive */
+.discord-card {
+  width: 90%;
+  max-width: 280px;
+}
+
   </style>
 </head>
 <body>
